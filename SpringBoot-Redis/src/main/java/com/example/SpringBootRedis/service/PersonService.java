@@ -62,7 +62,7 @@ public class PersonService {
         return person;
     }
 
-    @Cacheable(value = "people", keyGenerator = "cacheKeyGenerator")
+    @Cacheable(value = "people")
     public List<PersonBean> listAllPerson() {
         System.out.println("4 ... 已为人员列表集合数据做了缓存");
         return personDao.listAllPerson();
